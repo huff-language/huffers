@@ -20,6 +20,13 @@ Fully Onchain Badges for [Huff Language](https://huff.sh) GitHub Contributors.
 [Rinkeby] [`BadgeRenderer`](./src/BadgeRenderer.sol): [`0x7650f5b3ce9b075cbaced9062dcfe635ee892266`](https://rinkeby.etherscan.io/address/0x7650f5b3ce9b075cbaced9062dcfe635ee892266)
 
 
+**Example Deployed Image**
+
+<p align="center">
+<img height="300px" style="display: block; margin: 0 auto" src="./assets/example.png">
+</p>
+
+
 ## Deployment Notes
 
 **Deploying to Rinkeby**
