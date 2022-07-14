@@ -1,6 +1,6 @@
 <img align="right" width="150" height="150" top="100" src="./assets/shield.png">
 
-# huffers • [![ci](https://github.com/huff-language/huffers/actions/workflows/ci.yml/badge.svg)](https://github.com/huff-language/huffers/actions/workflows/ci.yml) ![license](https://img.shields.io/github/license/huff-language/huffers?label=license) ![solidity](https://img.shields.io/badge/solidity-^0.8.15-lightgrey)
+# huffers • [![ci](https://github.com/huff-language/huffers/actions/workflows/ci.yml/badge.svg)](https://github.com/huff-language/huffers/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/License-Apache_3.0-blue.svg)](https://opensource.org/licenses/Apache-3.0) ![solidity](https://img.shields.io/badge/solidity-^0.8.15-lightgrey)
 
 Fully Onchain Badges for [Huff Language](https://huff.sh) GitHub Contributors.
 
