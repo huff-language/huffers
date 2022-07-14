@@ -38,7 +38,7 @@ contract Shield is ERC721 {
   string public constant REPO_OWNER = "huff-language";
 
   /// @notice The repository name
-  string public constant REPO_NAME = "huffers";
+  string public constant REPO_NAME = "huff-rs";
 
   /// @notice The admin address
   address public immutable WARDEN;
