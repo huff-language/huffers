@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity ^0.8.15;
 
-import {Script} from 'forge-std/Script.sol';
-
-import {Shield} from "src/Shield.sol";
-import {BadgeRenderer} from "src/BadgeRenderer.sol";
+// Raw imports to prevent pragma footguns
+import 'forge-std/Script.sol';
+import "src/Shield.sol";
+import "src/BadgeRenderer.sol";
 
 /// @notice A very simple deployment script
 contract Deploy is Script {

@@ -11,8 +11,28 @@ Fully Onchain Badges for [Huff Language](https://huff.sh) GitHub Contributors.
 
 **Deployment Status**
 
-[Polygon] [`Shield`](./src/Shield.sol): `0x0` [WIP]
-[Polygon] [`BadgeRenderer`](./src/BadgeRenderer.sol): `0x0` [WIP]
+[Polygon Mainnet] [`Shield`](./src/Shield.sol): `0x0` [WIP]
+
+[Polygon Mainnet] [`BadgeRenderer`](./src/BadgeRenderer.sol): `0x0` [WIP]
+
+[Rinkeby] [`Shield`](./src/Shield.sol): [`0xce3a82dbf663d7c6e8c2fc3e8a6db42fc0739929`](https://rinkeby.etherscan.io/address/0xce3a82dbf663d7c6e8c2fc3e8a6db42fc0739929)
+
+[Rinkeby] [`BadgeRenderer`](./src/BadgeRenderer.sol): [`0x7650f5b3ce9b075cbaced9062dcfe635ee892266`](https://rinkeby.etherscan.io/address/0x7650f5b3ce9b075cbaced9062dcfe635ee892266)
+
+
+## Deployment Notes
+
+**Deploying to Rinkeby**
+```bash
+source .env
+forge script script/Deploy.s.sol:Deploy --rpc-url $ETH_RINKEBY_RPC_URL  --private-key $DEPLOYER_PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY -vvvv
+```
+
+**Deploying to Polygon Mainnet**
+```bash
+source .env
+forge script script/Deploy.s.sol:Deploy --rpc-url $POLYGON_MAINNET_RPC_URL  --private-key $DEPLOYER_PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY -vvvv
+```
 
 
 ## Blueprint

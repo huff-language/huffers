@@ -10,3 +10,6 @@ out/
 
 # Ignore flattened files
 flattened.txt
+
+# Ignore Broadcasts
+broadcast
