@@ -11,9 +11,10 @@ Fully Onchain Badges for [Huff Language](https://huff.sh) GitHub Contributors.
 
 **Deployment Status**
 
-[Polygon Mainnet] [`Shield`](./src/Shield.sol): `0x0` [WIP]
+[Optimism] [`Shield`](./src/Shield.sol): [`0x9172c52bf412de76e080bd595f8f8c55f0ff867c`](https://optimistic.etherscan.io/address/0x9172c52bf412de76e080bd595f8f8c55f0ff867c)
 
-[Polygon Mainnet] [`BadgeRenderer`](./src/BadgeRenderer.sol): `0x0` [WIP]
+[Optimism] [`BadgeRenderer`](./src/BadgeRenderer.sol): [`0x715da5e53526bedac9bd96e8fdb7efb185d1b6ca`](https://optimistic.etherscan.io/address/0x715da5e53526bedac9bd96e8fdb7efb185d1b6ca)
+
 
 [Rinkeby] [`Shield`](./src/Shield.sol): [`0xce3a82dbf663d7c6e8c2fc3e8a6db42fc0739929`](https://rinkeby.etherscan.io/address/0xce3a82dbf663d7c6e8c2fc3e8a6db42fc0739929)
 
@@ -39,6 +40,12 @@ forge script script/Deploy.s.sol:Deploy --rpc-url $ETH_RINKEBY_RPC_URL  --privat
 ```bash
 source .env
 forge script script/Deploy.s.sol:Deploy --rpc-url $POLYGON_MAINNET_RPC_URL  --private-key $DEPLOYER_PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY -vvvv
+```
+
+**Deploying to Optimism**
+```bash
+source .env
+forge script script/Deploy.s.sol:Deploy --rpc-url $OPTIMISM_MAINNET_RPC_URL  --private-key $DEPLOYER_PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY -vvvv
 ```
 
 
