@@ -11,19 +11,9 @@ Fully Onchain Badges for [Huff Language](https://huff.sh) GitHub Contributors.
 
 **Deployment Status**
 
-[Polygon] [`Shield.sol`](./src/Shield.sol): `0x0`
+[Polygon] [`Shield`](./src/Shield.sol): `0x0` [WIP]
+[Polygon] [`BadgeRenderer`](./src/BadgeRenderer.sol): `0x0` [WIP]
 
-
-Click [`use this template`](https://github.com/huff-language/huffers/generate) to create a new repository with this repo as the initial state.
-
-Or, if your repo already exists, run:
-```sh
-forge init --template https://github.com/huff-language/huffers
-git submodule update --init --recursive
-forge install
-```
-
-Run `./scripts/rename.sh` to rename all instances of `huffers` with the name of your project/repository.
 
 ## Blueprint
 
@@ -34,11 +24,13 @@ lib
 scripts
 ├─ Deploy.s.sol — Deployment Script
 src
+├─ interfaces
+|  └─ IBadgeRenderer — BadgeRenderer Interface
 ├─ BadgeRenderer — The renderer for Shields
 ├─ base64 — The base64 encoding library
 ├─ Shield — A contribution badge for Huff Language GitHub Contributors
 test
-└─ <exhaustive_tests>
+└─ Integration — Integration Tests
 ```
 
 
