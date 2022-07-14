@@ -3,6 +3,9 @@ pragma solidity ^0.8.15;
 
 import {Script} from 'forge-std/Script.sol';
 
+import {Shield} from "src/Shield.sol";
+import {BadgeRenderer} from "src/BadgeRenderer.sol";
+
 /// @notice A very simple deployment script
 contract Deploy is Script {
 
@@ -11,7 +14,7 @@ contract Deploy is Script {
   function run() external returns (Shield shield) {
     vm.startBroadcast();
     BadgeRenderer renderer = new BadgeRenderer();
-    shield = new Shield(renderer);
+    shield = new Shield(address(renderer));
     vm.stopBroadcast();
   }
 }
