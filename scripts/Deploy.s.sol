@@ -3,15 +3,15 @@ pragma solidity ^0.8.15;
 
 import {Script} from 'forge-std/Script.sol';
 
-/// @notice A Deployment Script
+/// @notice A very simple deployment script
 contract Deploy is Script {
 
   /// @notice The main script entrypoint
-  function run(address governance, address treasury) external returns (ScriptTypes.Contracts memory contracts) {
-      require(governance != address(0), "Governance address not set!");
-      require(treasury != address(0), "Treasury address not set!");
-
-      vm.startBroadcast();
-
+  /// @return shield The deployed shield contract
+  function run() external returns (Shield shield) {
+    vm.startBroadcast();
+    BadgeRenderer renderer = new BadgeRenderer();
+    shield = new Shield(renderer);
+    vm.stopBroadcast();
   }
 }

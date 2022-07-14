@@ -27,6 +27,9 @@ contract Shield is ERC721 {
   /// @notice A non-existant token
   error TokenDoesNotExist();
 
+  /// @notice Zero Address
+  error ZeroAddress();
+
   /// ----------------------------------------------------
   /// Public Config
   /// ----------------------------------------------------
@@ -90,7 +93,6 @@ contract Shield is ERC721 {
   /// @param _commitHash The hash of the commit
   /// @param _repositoryStars The number of stars the repository has
   /// @param _repositoryContributors The number of contributors to the repository
-  /// @return True if minted
   function mint(
     address _to,
     uint256 _pullRequestID,
@@ -174,7 +176,7 @@ contract Shield is ERC721 {
   /// @param _tokenId The token ID to render
   /// @return The token URI of the token ID
   function tokenURI(uint256 _tokenId) public override view virtual returns (string memory) {
-    if (ownerOf[_tokenId] == address(0)) revert TokenDoesNotExist();
+    if (ownerOf(_tokenId) == address(0)) revert TokenDoesNotExist();
 
     Contribution memory _contribution = contribution[_tokenId];
     string memory json = Base64.encode(bytes(string(abi.encodePacked(
